@@ -37,7 +37,7 @@ def findstrike(velocity, alt, az):
         A `tuple` of two floats
         '''
         g=9.8
-        h=5.498
+        h=8848
         range=math.sqrt((2*v**2)*(h+(v**2/2*g))/g)
         
         r1=6371000+h
