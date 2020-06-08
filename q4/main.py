@@ -15,8 +15,8 @@ Any extra lines of code (if required)
 as helper for this function.
 """
 
-startobs = datetime(2000, 1, 1, 0, 0, 0) #replace it by the time when Saturn will be just visible
-endobs = datetime(2020, 1, 1) #replace it by the time when Saturn is no longer visible from SAC terrace
+startobs = datetime(2020, 6, 8, 16, 48, 31) #replace it by the time when Saturn will be just visible
+endobs = datetime(2020, 6, 9, 3, 2, 17) #replace it by the time when Saturn is no longer visible from SAC terrace
 
 def findSaturn(obstime):
     '''
@@ -36,17 +36,8 @@ def findSaturn(obstime):
     alt=co.transform_to(AltAz(obstime=ti,location=mandi))
     source = Observer(location=mandi)
     azm=alt.secz
-    print("Saturn's Altitude at now = {0.alt:.5}".format(alt))
-    print("Saturn's Azimuth at now = {:.5} deg".format(azm))
-
 
     saturn_set_time = source.target_set_time(Time(obstime), co, which="nearest")
     saturn_rise_time = source.target_rise_time(Time(obstime), co, which="nearest")
 
-
-# rise and set time
-    print("Tonight rise time : ",saturn_rise_time)
-    print("Tonight set time  : ",saturn_set_time)
-
-    #return NotImplementedError
-findSaturn(datetime.now())
+    return (source.astropy_time_to_datetime(saturn_rise_time), source.astropy_time_to_datetime(saturn_set_time))
