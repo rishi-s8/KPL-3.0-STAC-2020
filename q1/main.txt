@@ -1,10 +1,9 @@
 # Write the name of astronomical objects within quotes shown below
 
-i) ""
-ii) ""
-iii) ""
-iv) ""
-v) ""
-vi) ""
-vii) "" & ""
+i) "Polaris"
+ii) "Regulus"
+iii) "Messier29(M29)"
+iv) "Messier92(M92)"
+v) "Sulafat"
+vi) "Saturn" & "Jupiter"
 
