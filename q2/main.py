@@ -15,4 +15,4 @@ def findDistance(vrec):
 	-------
 	a `float`
 	'''
-	return NotImplementedError
+	return vrec * (3261563.78 / 71)
