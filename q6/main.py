@@ -4,18 +4,20 @@ import math
 Any extra lines of code (if required)
 as helper for this function.
 """
-def findstrike(v, alt, az):
-'''
-Parameters
-----------
-velocity : A `float`
-alt: A `float`
-az: A `float`
 
-Returns
--------
-A `tuple` of two floats
+def findstrike(v, alt, az):
     '''
+    Parameters
+    ----------
+    velocity : A `float`
+    alt: A `float`
+    az: A `float`
+    
+    Returns
+    -------
+    A `tuple` of two floats
+    '''
+
     g=9.8
     h=8848
     range=math.sqrt((2*v**2)*(h+(v**2/2*g))/g)
@@ -46,8 +48,6 @@ A `tuple` of two floats
     lat=90-math.atan(math.sqrt((x2**2+y2**2)/z2**2))
 
     return (lat, long)
-
-
 
 
 
